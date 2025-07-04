@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Game Website</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Game 1: Star Polygon</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
 </head>
 <body>
-  <h1>Welcome to My Game</h1>
-  <div class="menu">
-    <button onclick="startGame()">Start Game</button>
-    <button onclick="showInstructions()">Instructions</button>
-    <button onclick="showCredits()">Credits</button>
-  </div>
-  <div id="output"></div>
-
-  <script src="script.js"></script>
+  <h1>Star Polygon Game</h1>
+  <p>Use arrow keys to change the number of points:</p>
+  <ul>
+    <li>⬆️ Increase by 1</li>
+    <li>⬇️ Decrease by 1</li>
+    <li>➡️ Increase by 10</li>
+    <li>⬅️ Reset to 1</li>
+    <li>🖱️ Click canvas to increase by 1</li>
+  </ul>
+  <script src="sketch.js"></script>
 </body>
 </html>
