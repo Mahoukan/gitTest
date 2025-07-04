@@ -1,47 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Game Menu</title>
+  <meta charset="UTF-8" />
+  <title>My Game Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
-      font-family: sans-serif;
-      background: #121212;
-      color: white;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #222, #333);
+      color: #fff;
+    }
+
+    header {
+      padding: 40px 20px 10px;
       text-align: center;
-      padding: 60px;
     }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 40px;
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
     }
-    .menu button {
+
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .game-card {
+      background-color: #444;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+
+    .game-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .game-card h2 {
+      font-size: 1.5rem;
+      margin: 0 0 10px;
+    }
+
+    .game-card p {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+
+    .game-card a {
+      display: inline-block;
+      padding: 10px 16px;
       background-color: #00aaff;
-      border: none;
-      padding: 15px 30px;
-      margin: 10px;
-      font-size: 1.2em;
-      color: white;
+      color: #fff;
       border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s;
+      text-decoration: none;
+      transition: background-color 0.2s;
     }
-    .menu button:hover {
+
+    .game-card a:hover {
       background-color: #008fcc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.8rem;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to My Game Hub</h1>
-  <div class="menu">
-    <button onclick="location.href='game1/index.html'">Play Game 1</button>
-    <button onclick="location.href='game2/index.html'">Play Game 2</button>
-    <button onclick="location.href='game3/index.html'">Play Game 3: ZENITH</button>
-    <button onclick="location.href='game4/index.html'">Play Game 4: Paint Tool</button>
-    <button onclick="location.href='game5/index.html'">Play Game 5: Colour Match</button>
-    <button onclick="location.href='game6/index.html'">Play Game 6: Click Challenge</button>
-    <!-- Add more buttons below as you make more games -->
-    <!-- <button onclick="location.href='game2/index.html'">Play Game 2</button> -->
-  </div>
+
+  <header>
+    <h1>🎮 My Game Collection</h1>
+    <p>Click a game to play. All games run in-browser, no download needed.</p>
+  </header>
+
+  <main class="game-grid">
+
+    <div class="game-card">
+      <h2>Game 1</h2>
+      <p>Star Polygon: Draws shapes with dynamic point connections.</p>
+      <a href="game1/index.html">Play</a>
+    </div>
+
+    <div class="game-card">
+      <h2>Game 2</h2>
+      <p>Curve Grid: Mesmerising spinning curve visualisation using math.</p>
+      <a href="game2/index.html">Play</a>
+    </div>
+
+    <div class="game-card">
+      <h2>Game 3</h2>
+      <p>ZENITH: A twin-stick shooter with upgrades and enemy waves.</p>
+      <a href="game3/index.html">Play</a>
+    </div>
+
+    <div class="game-card">
+      <h2>Game 4</h2>
+      <p>Paint Tool: Choose a colour and brush size to create your own art.</p>
+      <a href="game4/index.html">Play</a>
+    </div>
+
+    <div class="game-card">
+      <h2>Game 5</h2>
+      <p>Colour Match: Match the RGB sliders to a hidden colour.</p>
+      <a href="game5/index.html">Play</a>
+    </div>
+
+    <div class="game-card">
+      <h2>Game 6</h2>
+      <p>Click Challenge: Click the circle as fast as you can before time runs out.</p>
+      <a href="game6/index.html">Play</a>
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Your Name — All games made with p5.js
+  </footer>
+
 </body>
 </html>
